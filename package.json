@@ -1,5 +1,5 @@
 {
-  "name": "mysmtp",
+  "name": "mail-catcher",
   "version": "1.0.0",
   "main": "/dist/app.js",
   "license": "MIT",
