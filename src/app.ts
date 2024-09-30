@@ -6,6 +6,8 @@ const server = new SMTPServer({
   authOptional: true,
 
   onData(stream, session, callback) {
+    console.log(session.id);
+    
     simpleParser(stream)
       .then((parsed) => {
         console.log(JSON.stringify(parsed, null, 1))
