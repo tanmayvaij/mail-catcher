@@ -5,6 +5,21 @@ const server = new SMTPServer({
 
   authOptional: true,
 
+  onConnect(session, callback) {
+      console.log(`on connect called:- ${session.id}`);
+      callback()
+  },
+
+  onMailFrom(address, session, callback) {
+    console.log(`on main from called:- ${session.id} ${address.address}`);
+    callback() 
+  },
+
+  onRcptTo(address, session, callback) {
+    console.log(`on receive to called:- ${session.id} ${address.address}`);
+    callback() 
+  },
+
   onData(stream, session, callback) {
     console.log(session.id);
     
