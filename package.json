@@ -1,0 +1,19 @@
+{
+  "name": "mysmtp",
+  "version": "1.0.0",
+  "main": "/dist/app.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon ./src/app.ts",
+    "start": "node ./dist/app.js",
+    "build": "tsc -p ."
+  },
+  "dependencies": {
+    "mailparser": "^3.7.1",
+    "smtp-server": "^3.13.5"
+  },
+  "devDependencies": {
+    "@types/mailparser": "^3.4.4",
+    "@types/smtp-server": "^3.5.10"
+  }
+}
